@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="ajax.js"></script>
+</head>
+<body>
+    <input type="text" id="searchBox" placeholder="倔强" />
+    <button id="searchBtn">Search</button>
+    <audio id="audio" controls="controls" loop="true">
+      <source src="" type="audio/mpeg" />
+      Your browser does not support the audio tag.
+    </audio>
+
+    <input type="text" id="phone" placeholder="手机号码">
+    
+
+
+
+
+    <script>
+      let searchBox = document.getElementById("searchBox"); // 获取搜索框元素
+      let searchBtn = document.getElementById("searchBtn"); // 获取搜索按钮元素
+      let audio = document.getElementById("audio"); // 获取音频元素
+      const defaultUrlHeader = "http://musicapi.leanapp.cn"; // 默认URL头部2
+      const songsUrlHeader = "http://music.163.com"; // 音乐URL头部
+      searchBtn.onclick = function () {
+       let searchKeywords = searchBox.value;
+       if (searchKeywords == "") {
+         searchKeywords = searchBox.placeholder;
+       }
+       let keywordsUrl =
+         defaultUrlHeader + "/toplist";
+       AjaxRequest(keywordsUrl, renderTheFirstSong);
+     };
+     // 更换音频URL，默认播放第一条结果
+     function renderTheFirstSong(responseText) {
+      console.log(responseText)
+      let url2 = defaultUrlHeader + '/playlist/detail?id=' + responseText.list[0].id;
+      AjaxRequest(url2, function(responseText){
+        console.log(responseText)
+      });
+     }
+   </script>
+ </body> 
+</html>

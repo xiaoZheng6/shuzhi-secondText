@@ -1,0 +1,682 @@
+.part-background {
+    position: relative;
+    padding-top: 40px;
+    background: url(../images/bg_detail.jpg)50% 0 repeat-x;
+}
+/*歌单推荐*/
+.playlist_commend>h3{
+    background-position:0 0;
+}
+/*按钮s*/
+.MV_leftBtn,
+.newDisc_leftBtn,
+.commend_leftBtn,
+.newsongs_leftBtn,
+.playlist_leftBtn {
+    font-family: 'icomoon';
+    position: absolute;
+    visibility: hidden;
+    width: 80px;
+    height: 110px;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    z-index: 10;
+    font-size: 60px;
+    background-color: #eee;
+}
+.MV_rightBtn,
+.newDisc_rightBtn,
+.commend_rightBtn,
+.newsongs_rightBtn,
+.playlist_rightBtn {
+    font-family: 'icomoon';
+    position: absolute;
+    visibility: hidden;
+    width: 80px;
+    height: 110px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+    font-size: 60px;
+    background-color: #eee;
+}
+.MV_leftBtn,
+.newDisc_leftBtn,
+.newsongs_leftBtn{
+    top: 60%;
+}
+.MV_rightBtn,
+.newDisc_rightBtn,
+.newsongs_rightBtn{
+    top: 60%;
+}
+.MV_leftBtn:hover,
+.MV_rightBtn:hover,
+.newDisc_leftBtn:hover,
+.commend_leftBtn:hover,
+.newDisc_rightBtn:hover,
+.commend_rightBtn:hover,
+.newsongs_leftBtn:hover,
+.newsongs_rightBtn:hover,
+.playlist_leftBtn:hover,
+.playlist_rightBtn:hover {
+    background-color: #999;
+}
+/*按钮E*/
+/*大标签*/
+.Bodytitle {
+    display: block;
+    margin: 0 auto 20px;
+    width: 196px;
+    height: 40px;
+    background: url(../images/index_tit.png) no-repeat;
+}
+/*小标题S*/
+.MV_list,
+.newDisc_list,
+.newsongs_list,
+.playlist_list {
+    display: flex;
+    justify-content: center;
+    margin:40px 0;
+}
+.MV_item,
+.newDisc_item,
+.newsongs_item,
+.playlist_item {
+    float: left;
+    font-size: 14px;
+    margin: 0 15px ;
+    cursor: pointer;
+}
+.MV_item:hover,
+.newDisc_item:hover,
+.newsongs_item:hover,
+.playlist_item:hover {
+    color:#31c27c;
+}
+/*小标题E*/
+/*歌单推荐*/
+.playlist_section {
+    position: relative;
+    overflow: hidden;
+    height: 360px;
+    width: 1219.5px!important;
+}
+.playlist_section_list {
+    width: max-content;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: left .6s;
+}
+.playlist_section_item {
+    margin-right: 20px;
+    float: left;
+}
+.playlist_img_box{
+    display: block;
+    position: relative;
+    width: 224px;
+    height: 224px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.playlist_img {
+    width: 224px;
+    height: 224px;
+    transition: all 0.5s;
+}
+.playlist_img_box:hover .playlist_img {
+    transform: scale(1.1);  
+}
+.playlist_img_box::after {
+    content: '';
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    background: url(../images/cover_play.png) no-repeat;
+    transition: all 0.5s;
+}
+.playlist_img_box:hover::after {
+    opacity: 1;
+}
+.playlist_title {
+    display: block;
+    width: 224px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    font-size: 14px;
+    cursor: pointer;
+}
+.playlist_title:hover {
+    color: #31c27c;
+}
+.playlist_showNumber {
+    display: block;
+    font-size: 14px;
+    width: 224px;
+    color: #999;
+    font-style: normal;
+}
+/*切换按钮*/
+.MV_buttonClick,
+.newDisc_buttonClick,
+.commend_buttonClick,
+.newsongs_buttonClick,
+.buttonClick {
+    display: flex;
+    justify-content: center;
+    height: 36px;
+    margin-bottom: 14px;
+}
+.MV_changeBtn,
+.newDisc_changeBtn,
+.commend_changeBtn,
+.newsongs_changeBtn,
+.changeBtn {
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    border-radius: 6px;
+    background-color: #eee;
+}
+
+/*新歌首发*/
+.newsongs_show>h3 {
+    background-position: 0 -50px;
+}
+.newsongs_section {
+    position: relative;
+    overflow: hidden;
+    height: 360px;
+    width: 1229.5px!important;
+}
+  /*内容清单*/
+.newsongs_section_list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items:flex-start;
+    align-content:flex-start;
+    height: 360px;
+    transition: left 0.6s;
+}
+  /*内容项目*/
+.newsongs_section_item {
+    position: relative;
+    width: 380px;
+    height: 86px;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    margin-right: 30px;
+}
+.newsongs_img_box {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 86px;
+    height: 86px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.newsongs_img {
+    width: 86px;
+    height: 86px;
+    transition: all 0.5s;
+}
+.newsongs_img_box::after {
+    content: '';
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    background: url(../images/cover_play.png) no-repeat;
+    background-size: 100%;
+    transition: all 0.5s;
+}
+.newsongs_img_box:hover .newsongs_img {
+    background-color: #bbb;
+    transform: scale(1.1);  
+}
+.newsongs_img_box:hover::after {
+    opacity: 1;
+}
+.newsongs_name {
+    position: absolute;
+    top: 33px;
+    left: 100px;
+    width: 190px;
+    height: 21px;
+    line-height: 21px;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    color: #000;
+}
+
+.newsongs_name:hover {
+    color:#31c27c;
+}
+.newsongs_singer {
+    position: absolute;
+    top: 60px;
+    left: 100px;
+    width: 190px;
+    height: 21px;
+    line-height: 21px;
+    font-size: 14px;
+    font-style: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    color: #999;
+}
+.singer {
+    color: #999;
+}
+.singer:hover {
+    color: #31c27c;
+}
+.newsongs_timeLong {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    font-weight: 400;
+    font-style: normal;
+    color: #999;
+}
+
+/*精彩推荐*/
+.nice_commend>h3 {
+    background-position: 0 -100px;
+}
+.commend_section {
+    position: relative;
+    height: 246px;
+    width: 1219.5px!important;
+    overflow: hidden;
+    margin-bottom: 35px;
+}
+.commend_section_list {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 246px;
+    transition: left .6s;
+}
+.commend_section_item {
+    width: 590px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.commend_section_img {
+    width: 100%;
+}
+/*新碟首发*/
+.newDisc_show>h3 {
+    background-position: 0 -150px;
+}
+/*项目清单*/
+.newDisc_section {
+    position: relative;
+    overflow: hidden;
+    height: 615px;
+    width: 1219.5px!important;
+}
+.newDisc_section_list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items:flex-start;
+    align-content:flex-start;
+    height: 615px;
+    transition: left 0.6s;
+}
+.newDisc_section_item {
+    position: relative;
+    width: 224px;
+    height: 282px;
+    padding-bottom: 25px;
+    margin-right: 20px;
+}
+/*项目内容*/
+.newDisc_img_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 224px;
+    height: 224px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.newDisc_img {
+    width: 224px;
+    height: 224px;
+    transition: all 0.5s;
+}
+.newDisc_img_box::after {
+    content: '';
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    background: url(../images/cover_play.png) no-repeat;
+    background-size: 100%;
+    transition: all 0.5s;
+}
+.newDisc_img_box:hover .newDisc_img {
+    background-color: #bbb;
+    transform: scale(1.1);  
+}
+.newDisc_img_box:hover::after {
+    opacity: 1;
+}
+.newDisc_name {
+    position: absolute;
+    top: 239px;
+    left: 0px;
+    width: 224px;
+    height: 21px;
+    line-height: 21px;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    color: #000;
+}
+.newDisc_name:hover {
+    color:#31c27c;
+}
+.newDisc_singer {
+    position: absolute;
+    top: 260px;
+    left: 0px;
+    width: 224px;
+    height: 21px;
+    line-height: 21px;
+    font-size: 14px;
+    font-style: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    color: #999;
+}
+/*排行榜*/
+.rank_top {
+    width: 1200px!important;
+    margin: 0 auto;
+}
+.rank_top>h3 {
+    background-position: 0 -200px;
+}
+.rank_section_list {
+    margin-bottom: 70px;
+}
+.rank_section_item {
+    position: relative;
+    float: left;
+    width: 224px;
+    margin-right: 20px;
+    height: 500px;
+}
+.rank_section_item:nth-child(5){
+    margin-right: 0;
+}
+.rank_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 567px;
+    background: url(../images/bg_index_top.5314c494.jpg) no-repeat;
+    background-size: 500% 500px; 
+}
+.rank_section_item:nth-child(1) .rank_bg
+{
+    background-position: 0 0;
+}
+.rank_section_item:nth-child(2) .rank_bg
+{
+    background-position: 25% 0;
+}
+.rank_section_item:nth-child(3) .rank_bg
+{
+    background-position: 50% 0;
+}
+.rank_section_item:nth-child(4) .rank_bg
+{
+    background-position: 75% 0;
+}
+.rank_section_item:nth-child(5) .rank_bg
+{
+    background-position: 100% 0;
+}
+.rank_title_top {
+    position: absolute;
+    width: inherit;
+    top: 50px;
+    left: 0px;
+    text-align: center;
+    height: 22px;
+    font-size: 22px;
+    color: #eee;
+    font-weight: 300;
+}
+.rank_title_second{
+    position: absolute;
+    width: inherit;
+    top: 77px;
+    left: 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    color: #fff;
+}
+.rank_icon {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: inherit;
+    text-align: center;
+    z-index: 2;
+}
+.rank_img {
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    transition: opacity .5s;
+}
+.rank_section_item:hover .rank_img{
+    opacity: 2;
+}
+.rank_icon_line {
+    position: absolute;
+    top: 144px;
+    left: 94px;
+    width: 36px;
+    height: 2px;
+    background-color: #fff;
+}
+.rank_number {
+    position: absolute;
+    top: 200px;
+    left: 40px;
+    width: 164px;
+}
+.rank_number_section {
+    position: relative;
+    padding-left: 15px;
+    width: 149px;
+    height: 50px;
+    margin-bottom: 27px;
+}
+.rank_mingci {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 15px;
+    font-style: normal;
+    color: #fff;
+}
+.rank_singer,
+.rank_name {
+    max-width: 149px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #fff
+}
+.rank_singer>a,
+.rank_name>a {
+    color: #fff;
+}
+/*MV*/
+.MV_show>h3 {
+    background-position: 0 -250px;
+}
+/*项目清单*/
+.MV_section {
+    position: relative;
+    overflow: hidden;
+    height: 465px;
+    width: 1219.5px!important;
+}
+.MV_section_list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items:flex-start;
+    align-content:flex-start;
+    height: 465px;
+    transition: left 0.6s;
+}
+.MV_section_item {
+    position: relative;
+    width: 224px;
+    height: 207px;
+    padding-bottom: 25px;
+    margin-right: 20px;
+}
+/*项目内容*/
+.MV_img_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 224px;
+    height: 127px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.MV_img {
+    width: 224px;
+    height: 127px;
+    transition: all 0.5s;
+}
+.MV_img_box::after {
+    content: '';
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    background: url(../images/cover_play.png) no-repeat;
+    background-size: 100%;
+    transition: all 0.5s;
+}
+.MV_img_box:hover .MV_img {
+    background-color: #bbb;
+    transform: scale(1.1);  
+}
+.MV_img_box:hover::after {
+    opacity: 1;
+}
+.MV_name {
+    position: absolute;
+    top: 147px;
+    left: 0px;
+    width: 224px;
+    height: 21px;
+    line-height: 21px;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    color: #000;
+}
+.MV_name:hover {
+    color:#31c27c;
+}
+.MV_singer {
+    position: absolute;
+    top: 168px;
+    left: 0px;
+    width: 224px;
+    height: 21px;
+    line-height: 21px;
+    font-size: 14px;
+    font-style: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    color: #999;
+}
+.MV_showNumber {
+    position: absolute;
+    top: 189px;
+    left: 0;
+    font-size: 14px;
+    color: #999;
+}
+.MV_icon {
+    display: inline-block;
+    background: url(../images/icon_sprite.png) no-repeat;
+    background-position: -180px -20px;
+    width: 19px;
+    height: 12px;
+    margin-right: 5px;
+}
+.MV_number {
+    display: inline-block;
+}

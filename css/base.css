@@ -1,0 +1,58 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+}
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?qg1441');
+    src: url('../fonts/icomoon.eot?qg1441#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?qg1441') format('truetype'), url('../fonts/icomoon.woff?qg1441') format('woff'), url('../fonts/icomoon.svg?qg1441#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: "";
+    height: 0；
+}
+a {
+    color: #000;
+    cursor: pointer;
+}
+a:hover {
+    color: #31c27c;
+}
+input,
+button {
+    border-style: none;
+    outline-style: none;
+}
+button {
+    cursor: pointer;
+}
+img {
+    vertical-align: middle;
+}
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
