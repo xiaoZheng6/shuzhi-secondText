@@ -376,6 +376,68 @@
 .login-no:hover {
     color: #31c27c;
 }
+.login-yes:hover .login_yes_box {
+    display: block;
+}
+.login_yes_box {
+    display: none;
+    position: relative;
+    width: 290px;
+    max-height: 300px;
+    margin-top: 15px;
+    background-color: #fff;
+    border: 1px solid #999;
+    cursor: default;
+}
+.login_yes_box::before {
+    content: '';
+    position: absolute;
+    top: -22px;
+    left: 10px;
+    border: 10px solid transparent;
+    border-bottom: 12px solid #999 ;
+}
+.login_yes_box::after {
+    content: '';
+    position: absolute;
+    top: -19px;
+    left: 11px;
+    border: 9px solid transparent;
+    border-bottom: 11px solid #fff ;
+}
+.logoutBox,
+.login_information {
+    padding: 20px;
+}
+.informationImg {
+    float: left;
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+    border-radius: 35px;
+    overflow: hidden;
+}
+.informationImg>img {
+    width: 70px;
+    height: 70px;
+}
+.infomationName {
+    float: left;
+    max-width: 165px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+}
+.logoutBox>p{
+    display: inline-block;
+    max-width: 250px;
+    cursor: pointer;
+    color: #000;
+}
+.logoutBox>p:hover {
+    color: #31c27c;
+}
 /*vip*/
 .chongZhi,
 .kaiVip {

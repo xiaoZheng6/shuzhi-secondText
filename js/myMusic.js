@@ -1,3 +1,4 @@
+//登录界面
 window.addEventListener('load',function(){
     const defaultUrlHeader = "http://localhost:3000";
     const songsUrlHeader = "http://music.163.com";
@@ -5,6 +6,8 @@ window.addEventListener('load',function(){
     let login = document.querySelector('.login-no')
     let loginImg = document.querySelector('.Img_big')
     let loginName = document.querySelector('.infomationName')
+    let bodier_section_unlogin = document.querySelector('.bodier_unlogin')
+    let bodier_section_login = document.querySelector('.bodier_login')
     /* 判断登录状态*/
     let loginRefreshUrl = defaultUrlHeader + '/login/refresh';
     let loginStatusUrl = defaultUrlHeader + '/login/Status';
@@ -15,7 +18,8 @@ window.addEventListener('load',function(){
     function loginStatus(timestamp){
         login.style.display = 'block';
         login_ok.style.display = 'none';
-        timestamp++;
+        bodier_section_unlogin.style.display = 'block';
+        bodier_section_login.style.display = 'none' ;
         AjaxRequest((loginRefreshUrl + '?timestamp=' + timestamp),function(responseText){
             console.log(responseText);
             AjaxRequest((loginStatusUrl + '?timestamp=' + timestamp),function(responseText){
@@ -24,6 +28,8 @@ window.addEventListener('load',function(){
                 {
                     login.style.display = 'none';
                     login_ok.style.display = 'block';
+                    bodier_section_unlogin.style.display = 'none';
+                    bodier_section_login.style.display = 'block' ;
                     login_ok.children[0].src = responseText.data.profile.avatarUrl+'?param=40y40';
                     loginImg.src = responseText.data.profile.avatarUrl+'?param=70y70';
                     loginName.innerHTML = responseText.data.profile.nickname;
@@ -122,4 +128,13 @@ window.addEventListener('load',function(){
             }
         })
     })
+
+    let login_myMusic = document.querySelector('.login_myMusic')
+    login_myMusic.addEventListener('click',function(){
+        loginBox.style.display = 'block';
+        body.style = 'position:relative;overflow:hidden';
+        body.style.width = 'calc(100% - 10px)' ;
+    })
 })
+//未登录特效
+window.addEventListener('load',function(){})

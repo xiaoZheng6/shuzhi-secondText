@@ -7,9 +7,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/myMusic.css">
     <script src="../js/ajax.js"></script>
     <script src="../js/public.js"></script>
-    <script src="../js/login.js"></script>
+    <script src="../js/myMusic.js"></script>
 </head>
 <body>
         <!--侧边栏-->
@@ -49,8 +50,8 @@
                     <img src="../images/logo.png" alt="">
                 </a>
                 <ul class="topNav">
-                    <li class="topNav_item"><a href="#" class="Top_item Top_item_now">音乐馆</a></li>
-                    <li class="topNav_item"><a href="#" class="Top_item">我的音乐</a></li>
+                    <li class="topNav_item"><a href="../index.html" class="Top_item">音乐馆</a></li>
+                    <li class="topNav_item"><a href="myMusic.html" class="Top_item Top_item_now">我的音乐</a></li>
                     <li class="topNav_item" style="position: relative;">
                         <a href="#" class="Top_item">客户端</a>
                         <img src="../images/mark_1.png" alt="抢特权">
@@ -160,21 +161,17 @@
                     </div>
                 </div>
                 <!--上半部分end-->
-                <!-- 下半部分 -->
-                <ul class="bottomNav clearfix">
-                    <li class="bottomNav_item"><a href="../index.html" class="Bottom_item">首页</a></li>
-                    <li class="bottomNav_item"><a href="singer.html" class="Bottom_item Bottom_item_now">歌手</a></li>
-                    <li class="bottomNav_item"><a href="newDisc.html" class="Bottom_item">新碟</a></li>
-                    <li class="bottomNav_item"><a href="rank.html" class="Bottom_item">排行榜</a></li>
-                    <li class="bottomNav_item"><a href="playlist.html" class="Bottom_item">分类歌单</a></li>
-                    <li class="bottomNav_item"><a href="radio.html" class="Bottom_item">电台</a></li>
-                    <li class="bottomNav_item"><a href="MV.html" class="Bottom_item">MV</a></li>
-                    <li class="bottomNav_item"><a href="albums.html" class="Bottom_item">数字专辑</a></li>
-                    <li class="bottomNav_item"><a href="ticket.html" class="Bottom_item">票务</a></li>
-                </ul>
             </div>
         </div>
         <!--身体-->
+        <div class="bodier_unlogin">
+            <div class="bodier_section_unlogin">
+                <div class="title_img"></div>
+                <div class="title_img_second"></div>
+                <button class="login_myMusic">立即登录</button>
+            </div>
+        </div>
+        <div class="bodier_login" style="display: none;">待完善</div>
         <!--页尾-->
         <div class="footer">
             <div class="footer_section w">

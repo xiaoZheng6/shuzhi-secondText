@@ -6,5 +6,6 @@ function AjaxRequest(url, operationFun,keyword) {
       }
     };
     xhttp.open("POST", url, true);
+    xhttp.withCredentials = true;
     xhttp.send();
 }

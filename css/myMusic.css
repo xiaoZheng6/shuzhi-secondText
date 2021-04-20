@@ -1,0 +1,47 @@
+body {
+    min-width: 1240px;
+    overflow-y: scroll;
+}
+.bodier_unlogin {
+    position: relative;
+    height: 922px;
+    background: url(../images/bg_profile_unlogin.jpg) 50% no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.bodier_section_unlogin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.title_img {
+    width: 735px;
+    height: 64px;
+    background: url(../images/profile_tit.png);
+}
+.title_img_second {
+    width: 345px;
+    height: 30px;
+    margin: 30px auto;
+    background: url(../images/profile_tit.png) 0 -70px;
+}
+.login_myMusic {
+    display: block;
+    height: 46px;
+    line-height: 46px;
+    margin: 0 auto;
+    width: 128px;
+    padding: 0 23px;
+    font-size: 20px;
+    white-space: nowrap;
+    text-align: center;
+    background-color: #31c27c;
+    color: #fff;
+}
+.bodier_login {
+    height: 800px;
+    font-size: 40px;
+    margin: 0 auto;
+    text-align: center;
+}
