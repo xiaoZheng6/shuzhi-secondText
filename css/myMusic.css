@@ -2,6 +2,20 @@ body {
     min-width: 1240px;
     overflow-y: scroll;
 }
+/*加载中动画*/
+.loading {
+    position: relative;
+    width: 100%;
+    height: 800px;
+}
+.loading>img {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%,-50%);
+}
 .bodier_unlogin {
     position: relative;
     height: 922px;
@@ -39,9 +53,223 @@ body {
     background-color: #31c27c;
     color: #fff;
 }
+/*登录成功*/
 .bodier_login {
-    height: 800px;
-    font-size: 40px;
     margin: 0 auto;
+}
+.login_header {
+    padding-top: 65px;
+    height: 315px;
+    width: 100%;
+    background: url(../images/bg_profile.jpg) no-repeat;
+    background-size: cover;
+}
+.login_header_imgBox {
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden; 
+}
+.login_header_imgBox {
+    width: 105px;
+    height: 105px;
+}
+.login_header_nameBox {
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+}
+.login_header_social {
+    color: #999;
+    font-style: normal;
     text-align: center;
 }
+.attention {
+    display: inline-block;
+    margin: 15px 0;
+    cursor: pointer;
+    color: #fff;
+}
+.fansNumber,
+.attentionNumber {
+    font-style: normal;
+}
+.fansNumber:hover,
+.attentionNumber:hover {
+    color: #31c27c;
+}
+.fans {
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+}
+/*导航栏*/
+.login_person {
+    position: relative;
+    padding-top: 120px;
+}
+.person_section {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.person_section>li {
+    display: inline-block;
+    margin-right: 40px;
+    color: #fff;
+    height: 48px;
+    line-height: 48px;
+    cursor: pointer;
+}
+.person_section>li:hover {
+    color: #31c27c;
+}
+/*内容栏*/
+.login_bodier {
+    width: 100%;
+    background-color: #fff;
+}
+.show_perform {
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px;
+    height: 25px;
+    line-height: 25px;
+    background-color: #31c27c;
+    color: #fff;
+}
+.show_allBox {
+    margin-bottom: 25px;
+}
+.show_perform:hover {
+    background-color: #31caac;
+}
+/*歌名栏*/
+.historySong_list,
+.song_list {
+    margin-bottom: 20px;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+.song_section_list,
+.song_title {
+    position: relative;
+    white-space: nowrap;
+    height: 50px;
+    line-height: 50px;
+    background-color: #eee;
+    color: #999;
+}
+.song_section_list{
+    background-color: #fff;
+}
+.song_section_list:nth-child(2n) {
+    background-color: #eee;
+}
+.song_section_list>li,
+.song_title>li {
+    display: inline-block;
+    padding-left: 20px;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    overflow: hidden;
+}
+.song_section_name,
+.song_title_name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600px;
+}
+.song_section_artist,
+.song_title_artist {
+    position: absolute;
+    top: 0;
+    left: 620px;
+    width: 200px;
+}
+.song_section_album,
+.song_title_album {
+    position: absolute;
+    top: 0;
+    left: 840px;
+    width: 250px;
+}
+.song_section_time,
+.song_title_time {
+    position: absolute;
+    top: 0;
+    left: 1100px;
+    width: 50px;
+    padding-left: 0!important;
+}
+.song_section_time {
+    font-size: 14px;
+}
+/*小图标*/
+.song_section_list .song_section_menu {
+    position: absolute;
+    top: 8px;
+    left: 420px;
+    display: none;
+}
+.song_section_list .song_section_delect {
+    position: absolute;
+    top: 8px;
+    left: 1078px;
+    display: none;
+}
+.song_section_delect>span,
+.song_section_menu>span {
+    cursor: pointer;
+    float: left;
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+    background: url(../images/icon_list_menu.png) no-repeat;
+}
+.song_section_menu>span:nth-child(4){
+    margin-right: 0px;
+}
+.song_section_list:hover .song_section_delect,
+.song_section_list:hover .song_section_menu {
+    display: inline-block;
+}
+.song_section_list:hover .song_section_name {
+    width: 400px;
+}
+.song_section_list:hover .song_section_time {
+    display: none;
+}
+/*图标特效*/
+li>.icon_show:hover {
+    background-position: -40px 0;
+}
+li>.icon_add {
+    background-position: 0 -80px;
+}
+li>.icon_add:hover {
+    background-position: -40px -80px;
+}
+li>.icon_load {
+    background-position: 0 -280px;
+}
+li>.icon_load:hover {
+    background-position: -40px -280px;
+}
+li>.icon_share {
+    background-position: 0 -40px;
+}
+li>.icon_share:hover {
+    background-position: -40px -40px;
+}
+li>.icon_delect {
+    background-position: 0 -160px;
+}
+li>.icon_delect:hover {
+    background-position: -40px -160px;
+}
+
+
