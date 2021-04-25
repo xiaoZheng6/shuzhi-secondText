@@ -5,8 +5,107 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/player.js"></script>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/player.css">
 </head>
 <body>
-    
+    <!-- 登录框 -->
+    <div class="login">
+        <div class="mask"></div>
+        <div class="login_section">
+            <h3>
+                <a href="javascript:;" id="telephoneLogin" style="color: #31c27c;">手机登录</a>
+                <a href="javascript:;" id="wechatLogin">微信登录</a>
+                <span class="exit"></span>
+            </h3>
+            <div class="signin">
+                <input type="text" class="phoneLogin" placeholder="手机号登录">
+                <p class="tips"></p>
+                <input type="password" class="phonePasswordLogin" placeholder="密码">
+                <p class="tips"></p>
+                <button type="button" class="btnLogin">登录</button>
+            </div>
+            <div class="signup" style="display: none;">
+                <input type="text" class="phoneSignup" placeholder="手机号码">
+            </div>
+        </div>
+    </div>
+    <!--内容-->
+    <div class="playerAll">
+        <div class="playerLogo">
+            <a href="../index.html" target="_blank">QQ音乐</a>
+        </div>
+        <div class="player_login">
+            <div class="login-yes" style="display: none;">
+                <div class="login_yes_box">
+                    <a href="javascript:;" class="informationImg">
+                        <img src="" alt="" class="Img_big">
+                    </a>
+                    <a href="javascript:;" class="infomationName">人名</a>
+                    <p class="logout">退出</p>
+                </div>
+            </div>
+            <div class="login-no">登录</div>
+        </div>
+        <div class="playerSection">
+            <div class="songtext_box">
+                <p></p>
+            </div>
+        </div>
+        <div class="playermenu">
+            <div class="openbtn"></div>
+            <div class="menuBox">
+                <div class="menu_title">
+                    <span class="menu_songs">歌曲</span>
+                    <span class="menu_singer">歌手</span>
+                    <span class="menu_duration">时长</span>
+                </div>
+                <ul class="menu_section">
+                    <li class="menu_section_item">
+                        <span class="menu_number">
+                            <span></span>
+                            <img src="../images/wave.gif" alt="" class="noshow"> 
+                        </span>
+                        <span class="menu_songs"></span>
+                        <span class="menu_singer"></span>
+                        <span class="menu_duration"></span>
+                        <span class="show">
+                            <span class="icon_show" title="播放"></span>
+                            <span class="icon_add" title="添加到歌单"></span>
+                            <span class="icon_load" title="下载"></span>
+                            <span class="icon_share" title="分享"></span>
+                        </span>
+                        <span class="delect"><span class="icon_delect" title="删除"></span></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="playerBottom">
+            <a href="javascript:;" title="上一首" class="lastSong"></a>
+            <a href="javascript:;" title="播放/暂停" class="goStop"></a>
+            <a href="javascript:;" title="下一首" class="nextSong"></a>
+            <div class="songimg_box"><img src="../images/loading.gif" class="songimg" alt=""></div>
+            <div class="song_main">
+                <div class="player_music">
+                    <span class="songName"></span>
+                    -
+                    <span class="singerName"></span>
+                    <span class="time_show"><span class="time_now"></span> / <span class="time_all"></span></span>
+                    <div class="time_running">
+                        <div class="time_progress_all"></div>
+                        <div class="time_progress_play">
+                            <i class="time_progress_dot"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <audio id="audio" autoplay="true" loop="true" src="">
+            <source src="" type="audio/ogg">
+            <source src="" type="audio/mpeg">
+        </audio>
+    </div>
 </body>
 </html>

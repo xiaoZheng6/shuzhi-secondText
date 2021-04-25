@@ -1,0 +1,463 @@
+body {
+    height: 100%;
+    background: url(../images/bg_profile_unlogin.jpg) no-repeat;
+    background-size: cover;
+    background-position: 0 20%;
+    overflow: hidden;
+}
+/*logo*/
+.playerLogo {
+    position: fixed;
+    top: 20px;
+    left:20px;
+}
+.playerLogo>a {
+    color: #ccc;
+    font-size: 22px;
+}
+.playerLogo>a:hover {
+    color: #fff;
+}
+.player_login {
+    position: fixed;
+    top: 20px;
+    right:20px;
+}
+
+/*登录*/
+.login-yes,
+.login-no {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.informationImg {
+    float: left;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #fff;
+    margin-right: 5px;
+}
+.Img_big {
+    width: 30px;
+    height: 30px;
+}
+.infomationName {
+    float: left;
+    max-width: 50px;
+    height: 30px;
+    line-height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 15px;
+    color: #aaa;
+}
+.logout {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    color: #aaa;
+}
+.logout:hover {
+    color: #31c27c;
+}
+/* 登录框 */
+.login {
+    display: none;
+}
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.login_section {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 700px;
+    height: 500px;
+    background-color: #fff;
+    border: 1px solid rgba(191, 191, 191);
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+}
+.login_section h3 {
+    position: relative;
+    text-align: center;
+    line-height: 55px;
+    border-bottom: 1px solid #eee;
+}
+.login_section h3>a {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    color: #000;
+    margin: 0 60px;
+}
+.signin {
+    background-color: #fff;
+    padding: 100px 0 0 50px;
+}
+.phonePasswordLogin,
+.phoneLogin {
+    display: block;
+    width: 290px;
+    height: 30px;
+    padding-left: 10px;
+    border: 1px solid #999;
+    margin: 0 auto;   
+}
+.phonePasswordLogin:focus,
+.phoneLogin:focus {
+    border: 1px solid blue;
+}
+.tips {
+    width: 300px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    color: red;
+    margin: 0 auto;
+    text-align: left;
+}
+.btnLogin {
+    display: block;
+    margin: 40px auto 0;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #999;
+    color: #000;
+    background-color: #fff;
+    border-radius: 15px;
+    transition: transform 0.5s;
+}
+.btnLogin:hover {
+    border: none;
+    background-color: #31c27c;
+    color: #fff;
+}
+.exit {
+    font-family: 'icomoon';
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 12px;
+    line-height: 0;
+    color:#999;
+    cursor: pointer;
+}
+.exit:hover {
+    color: #31c27c;
+}
+/*内容*/
+.playerSection {
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 1300px;
+    background-color: transparent;
+    overflow: hidden;
+    cursor: grab; 
+}
+.songtext_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 58px;
+    transition: all 0.5s;
+}
+.songtext_box>p {
+    font-size: 22px;
+    color: #eee;
+}
+.on {
+    color: #31c27c !important;;
+}
+/*切歌栏*/
+.lastSong {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%);
+    left: 0;
+    width: 19px;
+    height: 20px;
+    background-image: url(../images/player.png);
+    background-position: 0 -30px;
+}
+.goStop {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%);
+    left: 65px;
+    width: 20px;
+    height: 28px;
+    background-image: url(../images/player.png);
+    background-position: 0 0;
+}
+.btn_pause {
+    background-position: -30px 0;
+}
+.nextSong {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%);
+    left: 132px;
+    width: 19px;
+    height: 20px;
+    background-image: url(../images/player.png);
+    background-position: 0 -52px;
+}
+.song_main {
+    position: relative;
+    margin-left: 300px;
+    margin-right: 300px;
+    height: inherit;
+}
+.player_music {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    color: #fff;
+}
+.songName {
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+.singerName {
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+.time_show {
+    float: right;
+}
+.time_running {
+    position: relative;
+    padding-top: 6px;
+    height: 8px;
+    width: 100%;
+    cursor: pointer;
+}
+.time_progress_all {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.time_progress_play {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.time_progress_dot {
+    position: absolute;
+    right: -5px;
+    top: -4px;
+    width: 10px;
+    height: 10px;
+    background-image: url(../images/player.png);
+    background-position: 0px -170px;
+}
+/*歌的信息*/
+.playerBottom {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    width: 1600px;
+    height: 100px;
+    transform: translateX(-50%);
+}
+.songimg_box {
+    position: absolute;
+    top: 15px;
+    left: 200px;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    overflow: hidden;
+}
+.songimg {
+    width: 100%;
+    animation: zhuan 3s linear infinite;
+}
+@keyframes zhuan{
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+/*歌列表*/
+.playermenu {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    width: 20%;
+    height: 70%;
+    max-width: 0;
+    min-width: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid transparent;
+    transition: min-width 0.5s;
+}
+.openbtn {
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'icomoon';
+    width: 30px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 30px;
+    color: #000;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255,0.7);
+}
+.menuBox{
+    height: 100%;
+}
+.menu_section_item>span,
+.menu_title>span {
+    color: #fff;    
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+}
+.menu_title {
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+}
+.menu_number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8%;
+    text-align: center;   
+}
+.menu_number>span {
+    font-size: 12px;
+}
+.noshow {
+    display: none;
+}
+.menu_songs {
+    position: absolute;
+    top: 0;
+    left: 8%;
+    width: 42%;
+}
+.show,
+.menu_singer {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 30%;
+}
+.delect,
+.menu_duration {
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 20%;
+}
+/* 内容 */
+.menu_section {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    overflow-y: scroll;
+}
+.menu_section_item {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+}
+.menu_section_item:hover .menu_duration,
+.menu_section_item:hover .menu_singer {
+    display: none;
+}
+.menu_section_item:hover .delect,
+.menu_section_item:hover .show {
+    display: flex;
+}
+/*图标*/
+.delect,
+.show {
+    display: none;
+    top: 7px;
+    flex-wrap:nowrap;
+}
+.delect>span {
+    margin-left: 10px;
+}
+.delect>span,
+.show>span {
+    cursor: pointer;
+    float: left;
+    width: 18px;
+    height: 18px;
+    margin-right: 4px;
+    background: url(../images/icon_list_menu.png) no-repeat;
+    background-size: 100px 160px;
+}
+span>.icon_show:hover {
+    background-position: -20px 0;
+}
+span>.icon_add {
+    background-position: 0 -40px;
+}
+span>.icon_add:hover {
+    background-position: -20px -40px;
+}
+span>.icon_load {
+    background-position: 0 -140px;
+}
+span>.icon_load:hover {
+    background-position: -20px -140px;
+}
+span>.icon_share {
+    background-position: 0 -20px;
+}
+span>.icon_share:hover {
+    background-position: -20px -20px;
+}
+span>.icon_delect {
+    background-position: 0 -80px;
+}
+span>.icon_delect:hover {
+    background-position: -20px -80px;
+}
